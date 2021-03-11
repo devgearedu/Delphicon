@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.564,E:\DelphiCon\CodeSite\Umain_CodeSite.pas=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.564,E:\DelphiCon\CodeSite\Umain_CodeSite.dfm=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit4.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.293,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.606,E:\DelphiCon\CodeSite\CodeSite_Demo.dproj=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2021-03-11 13:27:35.406,E:\Git\DelphiCon\CodeSite\Umain_CodeSite.pas=E:\DelphiCon\CodeSite\Umain_CodeSite.pas</Transaction>
+    <Transaction>2021-03-11 13:27:35.406,E:\Git\DelphiCon\CodeSite\Umain_CodeSite.dfm=E:\DelphiCon\CodeSite\Umain_CodeSite.dfm</Transaction>
+    <Transaction>2021-03-11 13:28:07.736,E:\Git\DelphiCon\CodeSite\CodeSite_Demo.dproj=E:\DelphiCon\CodeSite\CodeSite_Demo.dproj</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Umain_CodeSite.pas"/>
+    <File Path="Umain_CodeSite.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
