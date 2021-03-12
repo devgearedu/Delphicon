@@ -1,4 +1,4 @@
-object CodeSight_Form: TCodeSight_Form
+object CodeSite_Form: TCodeSite_Form
   Left = 0
   Top = 0
   Caption = 'Code site Demo'

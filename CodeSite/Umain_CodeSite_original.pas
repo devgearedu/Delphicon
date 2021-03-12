@@ -13,7 +13,7 @@ uses
   Vcl.Imaging.jpeg, Vcl.ExtCtrls;
 
 type
-  TCodeSight_Form = class(TForm)
+  TCodeSite_Form = class(TForm)
     DBGrid1: TDBGrid;
     cbCountry: TComboBox;
     Button1: TButton;
@@ -42,7 +42,7 @@ type
 function CurrentProcessMemory:Cardinal;
 
 var
-  CodeSight_Form: TCodeSight_Form;
+  CodeSite_Form: TCodeSite_Form;
 
 implementation
 uses CodeSiteLogging,psAPI;   //CodeSiteDBTools; //csmDataSet 사용을 위함
@@ -63,7 +63,7 @@ begin
 end;
 
 
-procedure TCodeSight_Form.Button1Click(Sender: TObject);
+procedure TCodeSite_Form.Button1Click(Sender: TObject);
 begin
 
   FDQuery1.Close;
@@ -74,7 +74,7 @@ begin
 
 end;
 
-procedure TCodeSight_Form.Button4Click(Sender: TObject);
+procedure TCodeSite_Form.Button4Click(Sender: TObject);
 var
   slist : tstringList;
 begin
@@ -83,7 +83,7 @@ begin
   //free 안함 memory leak
  end;
 
-procedure TCodeSight_Form.Timer1Timer(Sender: TObject);
+procedure TCodeSite_Form.Timer1Timer(Sender: TObject);
 begin
 //  CodeSite.Send(csscratchpad, Timetostr(now)+ 'memory : ' +
 //      (CurrentProcessMemory div (1024 * 1024)).ToString + 'MB' );
@@ -91,9 +91,10 @@ begin
 //      (CurrentProcessMemory div (1024 * 1024)).ToString + 'MB' );
 end;
 
-procedure TCodeSight_Form.Button2Click(Sender: TObject);
+procedure TCodeSite_Form.Button2Click(Sender: TObject);
 begin
 // {$ifdef debug}codesite.tracemethod(self,'button2click');{$endif}
 end;
-
+initialization
+finalization
 end.

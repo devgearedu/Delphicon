@@ -2,13 +2,13 @@
 
 uses
   Vcl.Forms,
-  Umain_CodeSite_original in 'Umain_CodeSite_original.pas' {CodeSight_Form};
+  Umain_CodeSite_original in 'Umain_CodeSite_original.pas' {CodeSite_Form};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TCodeSight_Form, CodeSight_Form);
+  Application.CreateForm(TCodeSite_Form, CodeSite_Form);
   Application.Run;
 end.

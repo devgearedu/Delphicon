@@ -99,7 +99,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="Umain_CodeSite_original.pas">
-            <Form>CodeSight_Form</Form>
+            <Form>CodeSite_Form</Form>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
