@@ -31,12 +31,12 @@ type
     Timer1: TTimer;
     Button4: TButton;
     procedure Button1Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Enable1Click(Sender: TObject);
     procedure Disable1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -80,6 +80,7 @@ begin
       CodeSite.Send(csmYellow, FDQuery1.RecordCount.ToString + ' 개 데이터');
       If FDQuery1.RecordCount > 4 then
         CodeSite.SendWarning('데이터가 4개를 넘음');
+
     // 결과 데이터세트를 통채로 전달 (그림4)
     //CodeSite.Send(csmDataSet, ‘Customers’, FDQuery1);
     // (변경후)
@@ -98,14 +99,6 @@ begin
 
 end;
 
-procedure TCodeSight_Form.Button3Click(Sender: TObject);
-begin
-    codesite.EnterMethod('Enter button3click');
-    CodeSite.Category := 'Level Overview';
-    CodeSite.Send(csmLevel1, 'Level 1 = Red');
-    CodeSite.Send(csmred, 'Level 1 = Red');
-    codesite.ExitMethod('Exit button3click');
-end;
 procedure TCodeSight_Form.Button4Click(Sender: TObject);
 var
   slist : tstringList;
@@ -144,14 +137,23 @@ begin
  CodeSite.AddSeparator;
 end;
 
+procedure TCodeSight_Form.Button3Click(Sender: TObject);
+begin
+ Codesite.EnterMethod('enter button3click');
+ CodeSite.Category := 'Level 확인';
+ CodeSite.Send(csmLevel1, 'Level 1 = Red');
+ CodeSite.Send(csmred, 'Level 1 = Red');
+ Codesite.ExitMethod('exit button3click');
+end;
+
 Initialization // 폼의 Initialization 블록을 사용하여 로거
 begin
   CodeSiteEx :=  TCodeSiteLogger.Create(nil); // (finalization 블록에서) 직접 Free 하기로 한다
   CodeSiteEx.Destination := TCodeSiteDestination.Create(CodeSiteEX);
   CodeSiteEx.Destination.AsString :=
    'File[Path=d:\Errors.csl]';
-  codesiteEx.Destination.Viewer.active := true;
-  codesite.Enabled := true;
+  CodesiteEx.Destination.Viewer.active := true;
+  Codesite.Enabled := true;
 end;
 finalization
   CodeSiteEx.Free;

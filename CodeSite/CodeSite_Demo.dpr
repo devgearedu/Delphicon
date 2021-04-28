@@ -4,7 +4,9 @@ uses
   CodeSiteLogging,
   SysUtils,
   Vcl.Forms,
-  Umain_CodeSite in 'Umain_CodeSite.pas' {CodeSight_Form};
+  Umain_CodeSite in 'Umain_CodeSite.pas' {CodeSight_Form},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
@@ -27,12 +29,10 @@ begin
   CodeSite.Destination := Destination;
 
   Codesite.Enabled := true;
- // CodeSite.ConnectUsingTcp;​
- // CodeSite.ConnectUsingTcp('ip address');
- // CodeSite.ConnectUsingTcp('ip address', port#);​​
   Destination.Viewer.Active := True;
   codesite.Send('Application start');
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Emerald');
   Application.CreateForm(TCodeSight_Form, CodeSight_Form);
   Application.Run;
 end.

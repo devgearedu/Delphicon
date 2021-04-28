@@ -14,12 +14,6 @@ uses
 
 type
   TCodeSite_Form = class(TForm)
-    DBGrid1: TDBGrid;
-    cbCountry: TComboBox;
-    Button1: TButton;
-    FDQuery1: TFDQuery;
-    FDConnection1: TFDConnection;
-    DataSource1: TDataSource;
     Button3: TButton;
     Button2: TButton;
     MainMenu1: TMainMenu;
@@ -29,7 +23,7 @@ type
     ListBox1: TListBox;
     Timer1: TTimer;
     Button4: TButton;
-    procedure Button1Click(Sender: TObject);
+    Button1: TButton;
     procedure Button2Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -63,17 +57,6 @@ begin
 end;
 
 
-procedure TCodeSite_Form.Button1Click(Sender: TObject);
-begin
-
-  FDQuery1.Close;
-  FDQuery1.SQL.Text := 'SELECT * FROM Customers ' +
-    'WHERE Country = ' + '''' + cbCountry.Items[cbCountry.ItemIndex] + '''';
-
-  FDQuery1.Open;
-
-end;
-
 procedure TCodeSite_Form.Button4Click(Sender: TObject);
 var
   slist : tstringList;
@@ -93,6 +76,8 @@ end;
 
 procedure TCodeSite_Form.Button2Click(Sender: TObject);
 begin
+ 
+
 // {$ifdef debug}codesite.tracemethod(self,'button2click');{$endif}
 end;
 initialization
